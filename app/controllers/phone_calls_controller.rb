@@ -1,13 +1,16 @@
 class PhoneCallsController < ApplicationController
-  before_action :set_phone_call, only: [ :show ]
+  before_action :set_phone_call, only: [:show]
   def index
     @phone_calls = PhoneCall.all
   end
+
   def show
   end
+
   def new
     @phone_call = PhoneCall.new
   end
+
   def create
     @phone_call = PhoneCall.new(phone_call_params)
     @phone_call.save
