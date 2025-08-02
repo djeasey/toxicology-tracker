@@ -393,7 +393,7 @@ DEPENDENCIES
   rspec-rails
   rubocop-rails-omakase
   selenium-webdriver
-  standard
+  standard (>= 1.0)
   stimulus-rails
   thruster
   turbo-rails
