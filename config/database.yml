@@ -79,20 +79,7 @@ test:
 # for a full overview on how database connection configuration can be specified.
 #
 production:
-  primary: &primary_production
-    <<: *default
-    database: toxicology_tracker_production
-    username: toxicology_tracker
-    password: <%= ENV["TOXICOLOGY_TRACKER_DATABASE_PASSWORD"] %>
-  cache:
-    <<: *primary_production
-    database: toxicology_tracker_production_cache
-    migrations_paths: db/cache_migrate
-  queue:
-    <<: *primary_production
-    database: toxicology_tracker_production_queue
-    migrations_paths: db/queue_migrate
-  cable:
-    <<: *primary_production
-    database: toxicology_tracker_production_cable
-    migrations_paths: db/cable_migrate
+  <<: *default
+  database: toxicology_tracker_production
+  username: toxicology_tracker
+  password: <%= ENV["TOXICOLOGY_TRACKER_DATABASE_PASSWORD"] %>
