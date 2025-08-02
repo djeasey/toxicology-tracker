@@ -1,0 +1,11 @@
+<h1>All Phone Calls</h1>
+
+<ul id="phone_calls">
+    <% @phone_calls.each do |phone_call|%>
+    <li>
+        <%= link_to phone_call.caller, phone_call_path(phone_call) %>
+    </li>
+    <% end %>
+</ul>
+
+<%= link_to "Log Phone Call", new_phone_call_path %>
